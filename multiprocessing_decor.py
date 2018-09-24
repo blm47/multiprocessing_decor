@@ -1,3 +1,4 @@
+
 import multiprocessing
 import functools
 
@@ -27,7 +28,7 @@ def func(candidates, args):
     return f
 
 
-def run_multi_worker(List, Func, **kwargs):
+def run_multi_worker(List, Func, processes=100, **kwargs):
     kwargs.update({'func': Func})
     pool = multiprocessing.Pool(processes=len(List))
     results = [pool.apply_async(my_decorator(func), ([c], kwargs)) for c in List]

@@ -1,4 +1,4 @@
-
+# is OS ==windows multiprocessing.freeze_support()
 import multiprocessing
 import functools
 

@@ -37,3 +37,6 @@ def run_multi_worker(List, Func, processes=100, **kwargs):
     for r in results:
         res.update(r.get()[0])
     return res
+
+def foo(x):
+    print(x)
